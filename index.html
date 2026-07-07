@@ -78,6 +78,7 @@
         <span onClick="{{ goPub }}" style="{{ navPub }}">Publications</span>
         <span onClick="{{ goPeople }}" style="{{ navPeople }}">People</span>
         <span onClick="{{ goNews }}" style="{{ navNews }}">News</span>
+        <span onClick="{{ goGallery }}" style="{{ navGallery }}">Gallery</span>
         <span onClick="{{ goJoin }}" style="border:1px solid #0b3c7a; color:#0b3c7a; padding:8px 18px; border-radius:999px; font-weight:600; cursor:pointer;">Join us</span>
       </div>
     </div>
@@ -281,6 +282,21 @@
   </div>
   </sc-if>
 
+  <!-- ============ GALLERY ============ -->
+  <sc-if value="{{ isGallery }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Gallery" style="max-width:1200px; margin:0 auto; padding:80px 40px;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">Gallery</div>
+    <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; margin:0 0 16px; letter-spacing:-0.01em;">Life in the lab</h1>
+    <p style="font-size:18px; line-height:1.6; color:#5b6b83; max-width:720px; margin:0 0 56px;">A look at our space at Westlake University — the campus, the bench, and the desks where we work.</p>
+
+    <div class="r-cards-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:26px;">
+      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:4/3; overflow:hidden;"><img src="uploads/gallery-campus-courtyard.jpg" alt="Westlake University campus courtyard" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div><div style="padding:18px 20px;"><div style="font-size:15.5px; font-weight:600;">Campus</div><div style="font-size:13.5px; color:#7c899c; margin-top:4px;">Westlake University, Hangzhou</div></div></div>
+      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:4/3; overflow:hidden;"><img src="uploads/gallery-wet-lab.jpg" alt="The lab's wet lab bench space" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div><div style="padding:18px 20px;"><div style="font-size:15.5px; font-weight:600;">Wet lab</div><div style="font-size:13.5px; color:#7c899c; margin-top:4px;">Where the bench work happens</div></div></div>
+      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:4/3; overflow:hidden;"><img src="uploads/gallery-office-space.jpg" alt="Lab office and desk space" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div><div style="padding:18px 20px;"><div style="font-size:15.5px; font-weight:600;">Office space</div><div style="font-size:13.5px; color:#7c899c; margin-top:4px;">Desks for reading, writing, and analysis</div></div></div>
+    </div>
+  </div>
+  </sc-if>
+
   <!-- ============ JOIN ============ -->
   <sc-if value="{{ isJoin }}" hint-placeholder-val="{{ false }}">
   <div data-screen-label="Join" style="max-width:1000px; margin:0 auto; padding:80px 40px;">
@@ -341,11 +357,11 @@ class Component extends DCLogic {
     const p = this.state.page;
     return {
       isHome: p==='home', isResearch: p==='research', isPub: p==='publications',
-      isPeople: p==='people', isNews: p==='news', isJoin: p==='join',
+      isPeople: p==='people', isNews: p==='news', isGallery: p==='gallery', isJoin: p==='join',
       goHome: ()=>this.go('home'), goResearch: ()=>this.go('research'), goPub: ()=>this.go('publications'),
-      goPeople: ()=>this.go('people'), goNews: ()=>this.go('news'), goJoin: ()=>this.go('join'),
+      goPeople: ()=>this.go('people'), goNews: ()=>this.go('news'), goGallery: ()=>this.go('gallery'), goJoin: ()=>this.go('join'),
       navHome: this.navStyle('home'), navResearch: this.navStyle('research'), navPub: this.navStyle('publications'),
-      navPeople: this.navStyle('people'), navNews: this.navStyle('news')
+      navPeople: this.navStyle('people'), navNews: this.navStyle('news'), navGallery: this.navStyle('gallery')
     };
   }
 }
