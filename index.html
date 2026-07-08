@@ -69,17 +69,22 @@
         <img src="uploads/lab_logo.png" alt="Multiscale Molecular Organization and Function Lab" style="height:42px; width:auto; display:block;">
         <div style="display:flex; align-items:baseline; gap:13px;">
           <div style="font-family:'Spectral',serif; font-size:23px; font-weight:600; color:#0b3c7a;">Zhou Lab</div>
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#7c899c; text-transform:uppercase;">Westlake University</div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.14em; color:#7c899c; text-transform:uppercase;">{{ T.navTagline[lang] }}</div>
         </div>
       </div>
       <div class="r-nav-links" style="display:flex; align-items:center; gap:30px; font-size:14.5px; color:#33465f;">
-        <span onClick="{{ goHome }}" style="{{ navHome }}">Home</span>
-        <span onClick="{{ goResearch }}" style="{{ navResearch }}">Research</span>
-        <span onClick="{{ goPub }}" style="{{ navPub }}">Publications</span>
-        <span onClick="{{ goPeople }}" style="{{ navPeople }}">People</span>
-        <span onClick="{{ goNews }}" style="{{ navNews }}">News</span>
-        <span onClick="{{ goGallery }}" style="{{ navGallery }}">Gallery</span>
-        <span onClick="{{ goJoin }}" style="border:1px solid #0b3c7a; color:#0b3c7a; padding:8px 18px; border-radius:999px; font-weight:600; cursor:pointer;">Join us</span>
+        <span onClick="{{ goHome }}" style="{{ navHome }}">{{ T.navHome[lang] }}</span>
+        <span onClick="{{ goResearch }}" style="{{ navResearch }}">{{ T.navResearch[lang] }}</span>
+        <span onClick="{{ goPub }}" style="{{ navPub }}">{{ T.navPub[lang] }}</span>
+        <span onClick="{{ goPeople }}" style="{{ navPeople }}">{{ T.navPeople[lang] }}</span>
+        <span onClick="{{ goNews }}" style="{{ navNews }}">{{ T.navNews[lang] }}</span>
+        <span onClick="{{ goGallery }}" style="{{ navGallery }}">{{ T.navGallery[lang] }}</span>
+        <div style="display:flex; align-items:center; gap:6px;">
+          <span onClick="{{ setLangEn }}" style="{{ langEnStyle }}">EN</span>
+          <span style="color:#c2cde0;">/</span>
+          <span onClick="{{ setLangZh }}" style="{{ langZhStyle }}">中</span>
+        </div>
+        <span onClick="{{ goJoin }}" style="border:1px solid #0b3c7a; color:#0b3c7a; padding:8px 18px; border-radius:999px; font-weight:600; cursor:pointer;">{{ T.navJoin[lang] }}</span>
       </div>
     </div>
   </div>
@@ -89,21 +94,21 @@
   <div data-screen-label="Home">
     <div class="r-hero r-padded" style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1.15fr 1fr; gap:56px; padding:96px 40px 80px; align-items:center;">
       <div>
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:28px;">The big question</div>
-        <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:55px; line-height:1.1; margin:0 0 28px; letter-spacing:-0.01em; color:#101d31; text-wrap:balance;">How do biomolecules arrange themselves in space — and how does that arrangement decide what a cell becomes?</h1>
-        <p style="font-size:19px; line-height:1.65; color:#3d4f66; max-width:560px; margin:0 0 36px;">We develop and combine multiscale, multimodal tools to watch molecules organize inside and outside the cell — from a whole nucleus down to a single nucleosome — and ask how that organization runs the genome.</p>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:28px;">{{ T.heroEyebrow[lang] }}</div>
+        <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:55px; line-height:1.1; margin:0 0 28px; letter-spacing:-0.01em; color:#101d31; text-wrap:balance;">{{ T.heroTitle[lang] }}</h1>
+        <p style="font-size:19px; line-height:1.65; color:#3d4f66; max-width:560px; margin:0 0 36px;">{{ T.heroBody[lang] }}</p>
         <div style="display:flex; gap:16px; align-items:center;">
-          <span onClick="{{ goResearch }}" style="background:#0b3c7a; color:#fff; padding:14px 28px; border-radius:8px; font-weight:600; font-size:15px; cursor:pointer;">Explore the science</span>
-          <span onClick="{{ goPeople }}" style="color:#0b3c7a; font-weight:600; font-size:15px; border-bottom:1px solid #0b3c7a; padding-bottom:2px; cursor:pointer;">Meet the team →</span>
+          <span onClick="{{ goResearch }}" style="background:#0b3c7a; color:#fff; padding:14px 28px; border-radius:8px; font-weight:600; font-size:15px; cursor:pointer;">{{ T.heroBtn1[lang] }}</span>
+          <span onClick="{{ goPeople }}" style="color:#0b3c7a; font-weight:600; font-size:15px; border-bottom:1px solid #0b3c7a; padding-bottom:2px; cursor:pointer;">{{ T.heroBtn2[lang] }}</span>
         </div>
       </div>
       <div style="position:relative;">
         <div class="r-hero-image-wrap" style="border-radius:14px; overflow:hidden; background:linear-gradient(180deg,#ffffff,#eef3fa); border:1px solid #d3ddec; height:min(700px,76vh); aspect-ratio:639/2748; width:auto; margin:0 auto;">
-          <img src="uploads/chromatin-overview.png" alt="From the nucleus down to a single nucleosome — chromatin organized across scales" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <img src="uploads/chromatin-overview.png" alt="{{ T.heroImgAlt[lang] }}" style="width:100%; height:100%; object-fit:cover; display:block;">
         </div>
         <div class="r-hero-badge" style="position:absolute; bottom:-26px; left:-26px; background:#fff; border:1px solid #e2e8f2; border-radius:12px; padding:18px 22px; box-shadow:0 20px 50px rgba(11,60,122,.12); max-width:240px;">
-          <div style="font-family:'Spectral',serif; font-size:26px; color:#0b3c7a; line-height:1.1;">Nucleus → nucleosome</div>
-          <div style="font-size:13px; color:#5b6b83; margin-top:6px;">2000 nm to 1 nm, in one framework</div>
+          <div style="font-family:'Spectral',serif; font-size:26px; color:#0b3c7a; line-height:1.1;">{{ T.heroBadgeTitle[lang] }}</div>
+          <div style="font-size:13px; color:#5b6b83; margin-top:6px;">{{ T.heroBadgeSub[lang] }}</div>
         </div>
       </div>
     </div>
@@ -111,37 +116,37 @@
     <!-- Scale ladder -->
     <div style="border-top:1px solid #e2e8f2; border-bottom:1px solid #e2e8f2; background:#fff;">
       <div style="max-width:1200px; margin:0 auto; padding:36px 40px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
-        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#7c899c; text-transform:uppercase; margin-right:8px;">Across every scale</span>
-        <div style="display:flex; align-items:baseline; gap:8px;"><span style="font-family:'Spectral',serif; font-size:19px; color:#101d31;">Nucleus</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a;">≈2000&nbsp;nm</span></div>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#7c899c; text-transform:uppercase; margin-right:8px;">{{ T.scaleEyebrow[lang] }}</span>
+        <div style="display:flex; align-items:baseline; gap:8px;"><span style="font-family:'Spectral',serif; font-size:19px; color:#101d31;">{{ T.scaleNucleus[lang] }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a;">≈2000&nbsp;nm</span></div>
         <span style="color:#c2cde0;">→</span>
-        <div style="display:flex; align-items:baseline; gap:8px;"><span style="font-family:'Spectral',serif; font-size:19px; color:#101d31;">Condensate</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a;">≈200&nbsp;nm</span></div>
+        <div style="display:flex; align-items:baseline; gap:8px;"><span style="font-family:'Spectral',serif; font-size:19px; color:#101d31;">{{ T.scaleCondensate[lang] }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a;">≈200&nbsp;nm</span></div>
         <span style="color:#c2cde0;">→</span>
-        <div style="display:flex; align-items:baseline; gap:8px;"><span style="font-family:'Spectral',serif; font-size:19px; color:#101d31;">Chromatin fiber</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a;">≈20&nbsp;nm</span></div>
+        <div style="display:flex; align-items:baseline; gap:8px;"><span style="font-family:'Spectral',serif; font-size:19px; color:#101d31;">{{ T.scaleFiber[lang] }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a;">≈20&nbsp;nm</span></div>
         <span style="color:#c2cde0;">→</span>
-        <div style="display:flex; align-items:baseline; gap:8px;"><span style="font-family:'Spectral',serif; font-size:19px; color:#101d31;">Nucleosome</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a;">≈1&nbsp;nm DNA</span></div>
+        <div style="display:flex; align-items:baseline; gap:8px;"><span style="font-family:'Spectral',serif; font-size:19px; color:#101d31;">{{ T.scaleNucleosome[lang] }}</span><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a;">≈1&nbsp;nm DNA</span></div>
       </div>
     </div>
 
     <!-- Methods -->
     <div style="border-bottom:1px solid #e2e8f2; background:#fff;">
       <div class="r-methods" style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr);">
-        <div style="padding:34px 30px; border-right:1px solid #e2e8f2;"><div style="width:54px; height:54px; border-radius:50%; background:#eef3fa; border:1px solid #dce5f1; margin-bottom:16px; overflow:hidden;"><img src="uploads/cryo-ET.png" alt="" style="width:100%; height:100%; object-fit:cover; object-position:50% 22%;" loading="lazy"></div><div style="font-size:16px; font-weight:600;">Cryo-electron tomography</div><div style="font-size:13.5px; color:#61718a; margin-top:6px;">Structures in their native cellular context</div></div>
-        <div style="padding:34px 30px; border-right:1px solid #e2e8f2;"><div style="width:54px; height:54px; border-radius:50%; background:#eef3fa; border:1px solid #dce5f1; display:flex; align-items:center; justify-content:center; margin-bottom:16px; overflow:hidden;"><img src="uploads/ai.png" alt="" style="width: 68px; height: 76px; object-fit: contain" loading="lazy"></div><div style="font-size:16px; font-weight:600;">Artificial intelligence</div><div style="font-size:13.5px; color:#61718a; margin-top:6px;">Turning images and data into models</div></div><div style="padding:34px 30px; border-right:1px solid #e2e8f2;"><div style="width:54px; height:54px; border-radius:50%; background:#eef3fa; border:1px solid #dce5f1; display:flex; align-items:center; justify-content:center; margin-bottom:16px; overflow:hidden;"><img src="uploads/biochemical%20reconstitution.png" alt="" style="width: 111px; height: 153px; object-fit: contain; position: static" loading="lazy"></div><div style="font-size:16px; font-weight:600;">Biochemical reconstitution</div><div style="font-size:13.5px; color:#61718a; margin-top:6px;">Rebuilding systems to test how they work</div></div>
-        
-        <div style="padding:34px 30px;"><div style="width:54px; height:54px; border-radius:50%; background:#eef3fa; border:1px solid #dce5f1; display:flex; align-items:center; justify-content:center; margin-bottom:16px; overflow:hidden;"><img src="uploads/cellular%20experiments.png" alt="" style="width:80%; height:80%; object-fit:contain;" loading="lazy"></div><div style="font-size:16px; font-weight:600;">Cellular experiments</div><div style="font-size:13.5px; color:#61718a; margin-top:6px;">Watching organization shape cell behavior</div></div>
+        <div style="padding:34px 30px; border-right:1px solid #e2e8f2;"><div style="width:54px; height:54px; border-radius:50%; background:#eef3fa; border:1px solid #dce5f1; margin-bottom:16px; overflow:hidden;"><img src="uploads/cryo-ET.png" alt="" style="width:100%; height:100%; object-fit:cover; object-position:50% 22%;" loading="lazy"></div><div style="font-size:16px; font-weight:600;">{{ T.methodCryoTitle[lang] }}</div><div style="font-size:13.5px; color:#61718a; margin-top:6px;">{{ T.methodCryoDesc[lang] }}</div></div>
+        <div style="padding:34px 30px; border-right:1px solid #e2e8f2;"><div style="width:54px; height:54px; border-radius:50%; background:#eef3fa; border:1px solid #dce5f1; display:flex; align-items:center; justify-content:center; margin-bottom:16px; overflow:hidden;"><img src="uploads/ai.png" alt="" style="width: 68px; height: 76px; object-fit: contain" loading="lazy"></div><div style="font-size:16px; font-weight:600;">{{ T.methodAiTitle[lang] }}</div><div style="font-size:13.5px; color:#61718a; margin-top:6px;">{{ T.methodAiDesc[lang] }}</div></div><div style="padding:34px 30px; border-right:1px solid #e2e8f2;"><div style="width:54px; height:54px; border-radius:50%; background:#eef3fa; border:1px solid #dce5f1; display:flex; align-items:center; justify-content:center; margin-bottom:16px; overflow:hidden;"><img src="uploads/biochemical%20reconstitution.png" alt="" style="width: 111px; height: 153px; object-fit: contain; position: static" loading="lazy"></div><div style="font-size:16px; font-weight:600;">{{ T.methodBiochemTitle[lang] }}</div><div style="font-size:13.5px; color:#61718a; margin-top:6px;">{{ T.methodBiochemDesc[lang] }}</div></div>
+
+        <div style="padding:34px 30px;"><div style="width:54px; height:54px; border-radius:50%; background:#eef3fa; border:1px solid #dce5f1; display:flex; align-items:center; justify-content:center; margin-bottom:16px; overflow:hidden;"><img src="uploads/cellular%20experiments.png" alt="" style="width:80%; height:80%; object-fit:contain;" loading="lazy"></div><div style="font-size:16px; font-weight:600;">{{ T.methodCellTitle[lang] }}</div><div style="font-size:13.5px; color:#61718a; margin-top:6px;">{{ T.methodCellDesc[lang] }}</div></div>
       </div>
     </div>
 
     <!-- What we study -->
     <div style="max-width:1200px; margin:0 auto; padding:80px 40px;">
       <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:44px;">
-        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:38px; margin:0;">What we study</h2>
-        <span onClick="{{ goResearch }}" style="font-size:14px; color:#0b3c7a; font-weight:600; cursor:pointer;">All research →</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:38px; margin:0;">{{ T.studyHeading[lang] }}</h2>
+        <span onClick="{{ goResearch }}" style="font-size:14px; color:#0b3c7a; font-weight:600; cursor:pointer;">{{ T.studyAllLink[lang] }}</span>
       </div>
       <div class="r-cards-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:26px;">
-        <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:16/10; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:14px;"><img src="uploads/chromatin-architecture-across-scale.png" alt="Chromatin, organized across scales" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div><div style="padding:26px 24px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:12px;">Theme 01</div><div style="font-family:'Spectral',serif; font-size:23px; margin-bottom:10px;">Chromatin, organized across scales</div><div style="font-size:14.5px; line-height:1.6; color:#5b6b83;">How nucleosome spacing and chromatin folding build the genome's 3D architecture — and tune it.</div></div></div>
-        <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:16/10; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:14px;"><img src="uploads/biomolecular-condensates.png" alt="Biomolecular condensates" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div><div style="padding:26px 24px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:12px;">Theme 02</div><div style="font-family:'Spectral',serif; font-size:23px; margin-bottom:10px;">Biomolecular condensates</div><div style="font-size:14.5px; line-height:1.6; color:#5b6b83;">How biomolecules condense into membraneless compartments that concentrate reactions and tune genome activity.</div></div></div>
-        <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:16/10; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:12px;"><img src="uploads/from%20structure%20to%20cell-fate.png" alt="From molecular structure to cell fate — organization guiding what a cell becomes" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div><div style="padding:26px 24px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:12px;">Theme 03</div><div style="font-family:'Spectral',serif; font-size:23px; margin-bottom:10px;">From structure to cell fate</div><div style="font-size:14.5px; line-height:1.6; color:#5b6b83;">Linking molecular organization to transcription, genome function, and how cells decide what to become.</div></div></div>
+        <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:16/10; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:14px;"><img src="uploads/chromatin-architecture-across-scale.png" alt="{{ T.theme1ImgAlt[lang] }}" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div><div style="padding:26px 24px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:12px;">{{ T.themeLabel01[lang] }}</div><div style="font-family:'Spectral',serif; font-size:23px; margin-bottom:10px;">{{ T.theme1Title[lang] }}</div><div style="font-size:14.5px; line-height:1.6; color:#5b6b83;">{{ T.theme1DescShort[lang] }}</div></div></div>
+        <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:16/10; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:14px;"><img src="uploads/biomolecular-condensates.png" alt="{{ T.theme2ImgAlt[lang] }}" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div><div style="padding:26px 24px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:12px;">{{ T.themeLabel02[lang] }}</div><div style="font-family:'Spectral',serif; font-size:23px; margin-bottom:10px;">{{ T.theme2Title[lang] }}</div><div style="font-size:14.5px; line-height:1.6; color:#5b6b83;">{{ T.theme2DescShort[lang] }}</div></div></div>
+        <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:16/10; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:12px;"><img src="uploads/from%20structure%20to%20cell-fate.png" alt="{{ T.theme3ImgAlt[lang] }}" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div><div style="padding:26px 24px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:12px;">{{ T.themeLabel03[lang] }}</div><div style="font-family:'Spectral',serif; font-size:23px; margin-bottom:10px;">{{ T.theme3Title[lang] }}</div><div style="font-size:14.5px; line-height:1.6; color:#5b6b83;">{{ T.theme3DescShort[lang] }}</div></div></div>
       </div>
     </div>
 
@@ -150,10 +155,10 @@
       <div class="r-pi-grid-300 r-padded" style="max-width:1200px; margin:0 auto; padding:72px 40px; display:grid; grid-template-columns:300px 1fr; gap:56px; align-items:center;">
         <div style="aspect-ratio:617/754; border-radius:14px; overflow:hidden;"><img src="uploads/1.jpg" alt="Huabin Zhou, Ph.D." style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy"></div>
         <div>
-          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; color:#93b6e6; text-transform:uppercase; margin-bottom:20px;">Principal Investigator</div>
-          <p style="font-family:'Spectral',serif; font-weight:300; font-size:30px; line-height:1.4; margin:0 0 24px; letter-spacing:-0.01em;">“Organization is one of life's instructions. We're building the tools to read it — from a whole nucleus down to a single nucleosome.”</p>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; color:#93b6e6; text-transform:uppercase; margin-bottom:20px;">{{ T.piEyebrow[lang] }}</div>
+          <p style="font-family:'Spectral',serif; font-weight:300; font-size:30px; line-height:1.4; margin:0 0 24px; letter-spacing:-0.01em;">{{ T.piQuote[lang] }}</p>
           <div style="font-size:16px; font-weight:600;">Huabin Zhou, Ph.D.</div>
-          <div style="font-size:14px; color:#9fbde9;">School of Life Sciences, Westlake University</div>
+          <div style="font-size:14px; color:#9fbde9;">{{ T.piAffiliation[lang] }}</div>
         </div>
       </div>
     </div>
@@ -161,20 +166,20 @@
     <!-- News + Join -->
     <div class="r-news-join" style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1.5fr 1fr;">
       <div style="padding:64px 40px; border-right:1px solid #e2e8f2;">
-        <h3 style="font-family:'Spectral',serif; font-weight:400; font-size:28px; margin:0 0 28px;">Latest news</h3>
+        <h3 style="font-family:'Spectral',serif; font-weight:400; font-size:28px; margin:0 0 28px;">{{ T.newsHeading[lang] }}</h3>
         <div style="display:flex; flex-direction:column; gap:22px;">
-          <div style="display:flex; gap:20px; align-items:baseline; padding-bottom:22px; border-bottom:1px solid #eef2f8;"><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a; white-space:nowrap;">2026 · 07</span><span style="font-size:16px; color:#25374f;">Our first virtual group meeting, with members joining from the US and UK.</span></div>
-          <div style="display:flex; gap:20px; align-items:baseline; padding-bottom:22px; border-bottom:1px solid #eef2f8;"><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a; white-space:nowrap;">2026 · 07</span><span style="font-size:16px; color:#25374f;">Welcome the summer interns — our first interns have arrived.</span></div>
-          <div style="display:flex; gap:20px; align-items:baseline;"><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a; white-space:nowrap;">2026 · 07</span><span style="font-size:16px; color:#25374f;">The Zhou Lab opens at Westlake University — recruiting across all levels.</span></div>
+          <div style="display:flex; gap:20px; align-items:baseline; padding-bottom:22px; border-bottom:1px solid #eef2f8;"><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a; white-space:nowrap;">2026 · 07</span><span style="font-size:16px; color:#25374f;">{{ T.newsItem1[lang] }}</span></div>
+          <div style="display:flex; gap:20px; align-items:baseline; padding-bottom:22px; border-bottom:1px solid #eef2f8;"><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a; white-space:nowrap;">2026 · 07</span><span style="font-size:16px; color:#25374f;">{{ T.newsItem2[lang] }}</span></div>
+          <div style="display:flex; gap:20px; align-items:baseline;"><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0b3c7a; white-space:nowrap;">2026 · 07</span><span style="font-size:16px; color:#25374f;">{{ T.newsItem3[lang] }}</span></div>
         </div>
       </div>
       <div style="padding:64px 40px; background:#eef3fa;">
-        <h3 style="font-family:'Spectral',serif; font-weight:400; font-size:28px; margin:0 0 16px;">Join us</h3>
-        <p style="font-size:15px; line-height:1.6; color:#4c5e77; margin:0 0 26px;">PhD students, rotation students, research assistants, postdocs — and summer interns. No single background required.</p>
+        <h3 style="font-family:'Spectral',serif; font-weight:400; font-size:28px; margin:0 0 16px;">{{ T.joinTeaserHeading[lang] }}</h3>
+        <p style="font-size:15px; line-height:1.6; color:#4c5e77; margin:0 0 26px;">{{ T.joinTeaserBody[lang] }}</p>
         <div onClick="{{ goJoin }}" style="display:flex; flex-direction:column; gap:12px; font-size:14.5px; cursor:pointer;">
-          <div style="background:#fff; border:1px solid #dce5f1; border-radius:8px; padding:14px 18px; display:flex; justify-content:space-between;"><span style="font-weight:600;">PhD &amp; rotation students</span><span style="color:#0b3c7a;">Open →</span></div>
-          <div style="background:#fff; border:1px solid #dce5f1; border-radius:8px; padding:14px 18px; display:flex; justify-content:space-between;"><span style="font-weight:600;">Postdocs &amp; research assistants</span><span style="color:#0b3c7a;">Open →</span></div>
-          <div style="background:#fff; border:1px solid #dce5f1; border-radius:8px; padding:14px 18px; display:flex; justify-content:space-between;"><span style="font-weight:600;">Summer interns</span><span style="color:#0b3c7a;">Open →</span></div>
+          <div style="background:#fff; border:1px solid #dce5f1; border-radius:8px; padding:14px 18px; display:flex; justify-content:space-between;"><span style="font-weight:600;">{{ T.jobPhdShort[lang] }}</span><span style="color:#0b3c7a;">{{ T.openArrow[lang] }}</span></div>
+          <div style="background:#fff; border:1px solid #dce5f1; border-radius:8px; padding:14px 18px; display:flex; justify-content:space-between;"><span style="font-weight:600;">{{ T.jobPostdocRaShort[lang] }}</span><span style="color:#0b3c7a;">{{ T.openArrow[lang] }}</span></div>
+          <div style="background:#fff; border:1px solid #dce5f1; border-radius:8px; padding:14px 18px; display:flex; justify-content:space-between;"><span style="font-weight:600;">{{ T.jobInternShort[lang] }}</span><span style="color:#0b3c7a;">{{ T.openArrow[lang] }}</span></div>
         </div>
       </div>
     </div>
@@ -185,34 +190,34 @@
   <sc-if value="{{ isResearch }}" hint-placeholder-val="{{ false }}">
   <div data-screen-label="Research" style="max-width:1200px; margin:0 auto; padding:80px 40px;">
     <div style="max-width:780px; margin-bottom:64px;">
-      <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">Research</div>
-      <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; line-height:1.12; margin:0 0 24px; letter-spacing:-0.01em;">One question, many lenses.</h1>
-      <p style="font-size:18px; line-height:1.65; color:#3d4f66;">Life is organized across scales — from a whole nucleus down to a single nucleosome. We develop and combine cryo-electron tomography, artificial intelligence, biochemical reconstitution and cellular experiments to watch biomolecules organize inside and outside the cell, and to ask how that organization runs the genome and shapes what a cell becomes.</p>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">{{ T.researchEyebrow[lang] }}</div>
+      <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; line-height:1.12; margin:0 0 24px; letter-spacing:-0.01em;">{{ T.researchH1[lang] }}</h1>
+      <p style="font-size:18px; line-height:1.65; color:#3d4f66;">{{ T.researchIntro[lang] }}</p>
     </div>
 
     <div style="display:flex; flex-direction:column; gap:32px;">
       <div class="r-research-row" style="display:grid; grid-template-columns:1fr 1.3fr; gap:44px; align-items:center; background:#fff; border:1px solid #e6ecf5; border-radius:16px; overflow:hidden;">
-        <div style="aspect-ratio:4/3; height:100%; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:20px;"><img src="uploads/chromatin-architecture-across-scale.png" alt="Chromatin architecture across scales — DNA to nucleosome to chromosome" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div>
-        <div style="padding:40px 44px 40px 0;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:14px;">Theme 01</div><h2 style="font-family:'Spectral',serif; font-weight:400; font-size:30px; margin:0 0 16px;">Chromatin, organized across scales</h2><p style="font-size:16px; line-height:1.65; color:#4c5e77; margin:0;">How does a two-metre genome fold into a nucleus, and how does that folding decide which genes are read? We connect nucleosome spacing and chromatin fiber folding to the genome's 3D architecture — and to how it is tuned.</p></div>
+        <div style="aspect-ratio:4/3; height:100%; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:20px;"><img src="uploads/chromatin-architecture-across-scale.png" alt="{{ T.research1ImgAlt[lang] }}" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div>
+        <div style="padding:40px 44px 40px 0;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:14px;">{{ T.themeLabel01[lang] }}</div><h2 style="font-family:'Spectral',serif; font-weight:400; font-size:30px; margin:0 0 16px;">{{ T.theme1Title[lang] }}</h2><p style="font-size:16px; line-height:1.65; color:#4c5e77; margin:0;">{{ T.theme1DescLong[lang] }}</p></div>
       </div>
       <div class="r-research-row" style="display:grid; grid-template-columns:1.3fr 1fr; gap:44px; align-items:center; background:#fff; border:1px solid #e6ecf5; border-radius:16px; overflow:hidden;">
-        <div style="padding:40px 0 40px 44px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:14px;">Theme 02</div><h2 style="font-family:'Spectral',serif; font-weight:400; font-size:30px; margin:0 0 16px;">Biomolecular condensates</h2><p style="font-size:16px; line-height:1.65; color:#4c5e77; margin:0;">Many biomolecules condense into membraneless compartments that concentrate reactions and organize the crowded interior of the cell. We study how these condensates form, what they gather, and how they tune genome activity.</p></div>
-        <div style="aspect-ratio:4/3; height:100%; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:20px;"><img src="uploads/biomolecular-condensates.png" alt="Biomolecular condensates forming a membraneless compartment" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div>
+        <div style="padding:40px 0 40px 44px;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:14px;">{{ T.themeLabel02[lang] }}</div><h2 style="font-family:'Spectral',serif; font-weight:400; font-size:30px; margin:0 0 16px;">{{ T.theme2Title[lang] }}</h2><p style="font-size:16px; line-height:1.65; color:#4c5e77; margin:0;">{{ T.theme2DescLong[lang] }}</p></div>
+        <div style="aspect-ratio:4/3; height:100%; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:20px;"><img src="uploads/biomolecular-condensates.png" alt="{{ T.research2ImgAlt[lang] }}" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div>
       </div>
       <div class="r-research-row" style="display:grid; grid-template-columns:1fr 1.3fr; gap:44px; align-items:center; background:#fff; border:1px solid #e6ecf5; border-radius:16px; overflow:hidden;">
-        <div style="aspect-ratio:4/3; height:100%; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:16px;"><img src="uploads/from%20structure%20to%20cell-fate.png" alt="From molecular structure to cell fate — nucleosome to transcription to cell identity" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div>
-        <div style="padding:40px 44px 40px 0;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:14px;">Theme 03</div><h2 style="font-family:'Spectral',serif; font-weight:400; font-size:30px; margin:0 0 16px;">From structure to cell fate</h2><p style="font-size:16px; line-height:1.65; color:#4c5e77; margin:0;">Ultimately, organization matters because it changes what cells do. We link molecular organization to transcription, genome function, and the decisions that set a cell's identity.</p></div>
+        <div style="aspect-ratio:4/3; height:100%; background:linear-gradient(180deg,#f5f8fc,#e9f0f8); display:flex; align-items:center; justify-content:center; padding:16px;"><img src="uploads/from%20structure%20to%20cell-fate.png" alt="{{ T.research3ImgAlt[lang] }}" style="width:100%; height:100%; object-fit:contain;" loading="lazy"></div>
+        <div style="padding:40px 44px 40px 0;"><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:14px;">{{ T.themeLabel03[lang] }}</div><h2 style="font-family:'Spectral',serif; font-weight:400; font-size:30px; margin:0 0 16px;">{{ T.theme3Title[lang] }}</h2><p style="font-size:16px; line-height:1.65; color:#4c5e77; margin:0;">{{ T.theme3DescLong[lang] }}</p></div>
       </div>
     </div>
 
     <div style="margin-top:72px; padding:52px; background:#0b3c7a; border-radius:16px; color:#eaf1fb;">
-      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; color:#93b6e6; text-transform:uppercase; margin-bottom:12px;">How we work · one question, many lenses</div>
-      <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:30px; margin:0 0 34px; color:#fff;">Our toolkit</h2>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.16em; color:#93b6e6; text-transform:uppercase; margin-bottom:12px;">{{ T.toolkitEyebrow[lang] }}</div>
+      <h2 style="font-family:'Spectral',serif; font-weight:400; font-size:30px; margin:0 0 34px; color:#fff;">{{ T.toolkitHeading[lang] }}</h2>
       <div class="r-methods" style="display:grid; grid-template-columns:repeat(4,1fr); gap:28px;">
-        <div><div style="font-family:'Spectral',serif; font-size:22px; color:#fff; margin-bottom:8px;">Cryo-ET</div><div style="font-size:14px; line-height:1.55; color:#bcd2ef;">Structures in their native cellular context.</div></div>
-        <div><div style="font-family:'Spectral',serif; font-size:22px; color:#fff; margin-bottom:8px;">Artificial intelligence</div><div style="font-size:14px; line-height:1.55; color:#bcd2ef;">Turning images and data into models.</div></div>
-        <div><div style="font-family:'Spectral',serif; font-size:22px; color:#fff; margin-bottom:8px;">Reconstitution</div><div style="font-size:14px; line-height:1.55; color:#bcd2ef;">Rebuilding systems to test how they work.</div></div>
-        <div><div style="font-family:'Spectral',serif; font-size:22px; color:#fff; margin-bottom:8px;">Cell biology</div><div style="font-size:14px; line-height:1.55; color:#bcd2ef;">Watching organization shape cell behavior.</div></div>
+        <div><div style="font-family:'Spectral',serif; font-size:22px; color:#fff; margin-bottom:8px;">{{ T.toolCryoName[lang] }}</div><div style="font-size:14px; line-height:1.55; color:#bcd2ef;">{{ T.toolCryoDesc[lang] }}</div></div>
+        <div><div style="font-family:'Spectral',serif; font-size:22px; color:#fff; margin-bottom:8px;">{{ T.toolAiName[lang] }}</div><div style="font-size:14px; line-height:1.55; color:#bcd2ef;">{{ T.toolAiDesc[lang] }}</div></div>
+        <div><div style="font-family:'Spectral',serif; font-size:22px; color:#fff; margin-bottom:8px;">{{ T.toolReconName[lang] }}</div><div style="font-size:14px; line-height:1.55; color:#bcd2ef;">{{ T.toolReconDesc[lang] }}</div></div>
+        <div><div style="font-family:'Spectral',serif; font-size:22px; color:#fff; margin-bottom:8px;">{{ T.toolCellName[lang] }}</div><div style="font-size:14px; line-height:1.55; color:#bcd2ef;">{{ T.toolCellDesc[lang] }}</div></div>
       </div>
     </div>
   </div>
@@ -221,9 +226,9 @@
   <!-- ============ PUBLICATIONS ============ -->
   <sc-if value="{{ isPub }}" hint-placeholder-val="{{ false }}">
   <div data-screen-label="Publications" style="max-width:1000px; margin:0 auto; padding:80px 40px;">
-    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">Publications</div>
-    <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; margin:0 0 16px; letter-spacing:-0.01em;">Selected publications</h1>
-    <p style="font-size:17px; color:#5b6b83; margin:0 0 20px; max-width:660px;">A full, continuously updated list is available on ORCID.</p>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">{{ T.pubEyebrow[lang] }}</div>
+    <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; margin:0 0 16px; letter-spacing:-0.01em;">{{ T.pubH1[lang] }}</h1>
+    <p style="font-size:17px; color:#5b6b83; margin:0 0 20px; max-width:660px;">{{ T.pubIntro[lang] }}</p>
     <a href="https://orcid.org/0000-0002-7788-0806" target="_blank" style="display:inline-flex; align-items:center; gap:8px; font-family:'IBM Plex Mono',monospace; font-size:13px; color:#0b3c7a; text-decoration:none; border:1px solid #b6c8e2; border-radius:999px; padding:8px 16px; margin-bottom:48px;">ORCID · 0000-0002-7788-0806 ↗</a>
 
     <div style="display:flex; flex-direction:column;">
@@ -239,32 +244,32 @@
   <!-- ============ PEOPLE ============ -->
   <sc-if value="{{ isPeople }}" hint-placeholder-val="{{ false }}">
   <div data-screen-label="People" style="max-width:1200px; margin:0 auto; padding:80px 40px;">
-    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">People</div>
-    <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; margin:0 0 12px; letter-spacing:-0.01em;">A young, curious team</h1>
-    <p style="font-size:18px; line-height:1.6; color:#5b6b83; max-width:720px; margin:0 0 56px;">Across physics, chemistry, biology &amp; code. We come from different backgrounds and learn from each other every day — we care about good questions, careful experiments, and a lab where people grow and have fun doing hard science together.</p>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">{{ T.peopleEyebrow[lang] }}</div>
+    <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; margin:0 0 12px; letter-spacing:-0.01em;">{{ T.peopleH1[lang] }}</h1>
+    <p style="font-size:18px; line-height:1.6; color:#5b6b83; max-width:720px; margin:0 0 56px;">{{ T.peopleIntro[lang] }}</p>
 
     <div class="r-pi-card" style="display:grid; grid-template-columns:280px 1fr; gap:48px; align-items:start; margin-bottom:72px;">
       <div style="aspect-ratio:3/4; border-radius:14px; overflow:hidden; border:1px solid #d3ddec;"><img src="uploads/2.jpg" alt="Huabin Zhou, Ph.D." style="width:100%; height:100%; object-fit:cover; object-position:50% 25%; display:block;" loading="lazy"></div>
       <div>
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:12px;">Principal Investigator</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; color:#0b3c7a; text-transform:uppercase; margin-bottom:12px;">{{ T.piEyebrow[lang] }}</div>
         <h2 style="font-family:'Spectral',serif; font-weight:500; font-size:32px; margin:0 0 6px;">Huabin Zhou, Ph.D.</h2>
-        <div style="font-size:15px; color:#5b6b83; margin-bottom:22px;">Principal Investigator · School of Life Sciences, Westlake University</div>
-        <p style="font-size:16px; line-height:1.7; color:#3d4f66; max-width:640px; margin:0 0 18px;">Huabin develops and combines multiscale, multimodal approaches — cryo-electron tomography, artificial intelligence, biochemical reconstitution and cellular experiments — to understand how biomolecules organize in space, and how that organization regulates the life of the cell. <span style="color:#0b3c7a; font-weight:600;">[ full bio to be added ]</span></p>
-        <div style="display:flex; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:13px;"><a href="https://orcid.org/0000-0002-7788-0806" target="_blank" style="color:#0b3c7a; text-decoration:none;">ORCID ↗</a><a href="mailto:zhouhuabin@westlake.edu.cn" style="color:#0b3c7a; text-decoration:none;">Email ↗</a><a href="https://lifesciences.westlake.edu.cn/faculty/huabin-zhou.html" target="_blank" style="color:#0b3c7a; text-decoration:none;">Westlake profile ↗</a></div>
+        <div style="font-size:15px; color:#5b6b83; margin-bottom:22px;">{{ T.piEyebrow[lang] }} · {{ T.piAffiliation[lang] }}</div>
+        <p style="font-size:16px; line-height:1.7; color:#3d4f66; max-width:640px; margin:0 0 18px;">{{ T.piBioText[lang] }} <span style="color:#0b3c7a; font-weight:600;">{{ T.piBioPlaceholder[lang] }}</span></p>
+        <div style="display:flex; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:13px;"><a href="https://orcid.org/0000-0002-7788-0806" target="_blank" style="color:#0b3c7a; text-decoration:none;">{{ T.linkOrcid[lang] }}</a><a href="mailto:zhouhuabin@westlake.edu.cn" style="color:#0b3c7a; text-decoration:none;">{{ T.linkEmail[lang] }}</a><a href="https://lifesciences.westlake.edu.cn/faculty/huabin-zhou.html" target="_blank" style="color:#0b3c7a; text-decoration:none;">{{ T.linkWestlakeProfile[lang] }}</a></div>
       </div>
     </div>
 
-    <h3 style="font-family:'Spectral',serif; font-weight:400; font-size:26px; margin:0 0 28px; padding-top:40px; border-top:1px solid #e2e8f2;">Lab members</h3>
+    <h3 style="font-family:'Spectral',serif; font-weight:400; font-size:26px; margin:0 0 28px; padding-top:40px; border-top:1px solid #e2e8f2;">{{ T.labMembersHeading[lang] }}</h3>
     <div class="r-members-4" style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-bottom:56px;">
-      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:12px; overflow:hidden;"><div style="aspect-ratio:1; overflow:hidden;"><img src="uploads/张雅楠-_Yanan_Zhang_photo.jpg" alt="Yanan Zhang" style="width:100%; height:100%; object-fit:cover; object-position:50% 25%; display:block;" loading="lazy"></div><div style="padding:18px;"><div style="font-size:16px; font-weight:600;">Yanan Zhang</div><div style="font-size:13px; color:#7c899c;">Visiting scholar</div></div></div>
-      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:12px; overflow:hidden;"><div style="aspect-ratio:1; overflow:hidden;"><img src="uploads/劳春葆-Chunbao_Lao_photo.jpg" alt="Chunbao Lao" style="width:100%; height:100%; object-fit:cover; object-position:50% 25%; display:block;" loading="lazy"></div><div style="padding:18px;"><div style="font-size:16px; font-weight:600;">Chunbao Lao</div><div style="font-size:13px; color:#7c899c;">Research assistant</div></div></div>
-      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:12px; overflow:hidden;"><div style="aspect-ratio:1; overflow:hidden;"><img src="uploads/宋士硕-_Shishuo_Song_photo.jpg" alt="Shishuo Song" style="width:100%; height:100%; object-fit:cover; object-position:50% 22%; display:block;" loading="lazy"></div><div style="padding:18px;"><div style="font-size:16px; font-weight:600;">Shishuo Song</div><div style="font-size:13px; color:#7c899c;">Research assistant</div></div></div>
+      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:12px; overflow:hidden;"><div style="aspect-ratio:1; overflow:hidden;"><img src="uploads/张雅楠-_Yanan_Zhang_photo.jpg" alt="Yanan Zhang" style="width:100%; height:100%; object-fit:cover; object-position:50% 25%; display:block;" loading="lazy"></div><div style="padding:18px;"><div style="font-size:16px; font-weight:600;">{{ T.memberYananZhang[lang] }}</div><div style="font-size:13px; color:#7c899c;">{{ T.roleVisitingScholar[lang] }}</div></div></div>
+      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:12px; overflow:hidden;"><div style="aspect-ratio:1; overflow:hidden;"><img src="uploads/劳春葆-Chunbao_Lao_photo.jpg" alt="Chunbao Lao" style="width:100%; height:100%; object-fit:cover; object-position:50% 25%; display:block;" loading="lazy"></div><div style="padding:18px;"><div style="font-size:16px; font-weight:600;">{{ T.memberChunbaoLao[lang] }}</div><div style="font-size:13px; color:#7c899c;">{{ T.roleResearchAssistant[lang] }}</div></div></div>
+      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:12px; overflow:hidden;"><div style="aspect-ratio:1; overflow:hidden;"><img src="uploads/宋士硕-_Shishuo_Song_photo.jpg" alt="Shishuo Song" style="width:100%; height:100%; object-fit:cover; object-position:50% 22%; display:block;" loading="lazy"></div><div style="padding:18px;"><div style="font-size:16px; font-weight:600;">{{ T.memberShishuoSong[lang] }}</div><div style="font-size:13px; color:#7c899c;">{{ T.roleResearchAssistant[lang] }}</div></div></div>
     </div>
 
     <div style="background:#eef3fa; border:1px dashed #b6c8e2; border-radius:14px; padding:40px; text-align:center;">
-      <div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:10px;">This could be you.</div>
-      <p style="font-size:15px; color:#4c5e77; margin:0 0 20px;">We're recruiting PhD &amp; rotation students, research assistants, postdocs — and summer interns.</p>
-      <span onClick="{{ goJoin }}" style="background:#0b3c7a; color:#fff; padding:12px 26px; border-radius:8px; font-weight:600; font-size:14.5px; cursor:pointer; display:inline-block;">See how to join →</span>
+      <div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:10px;">{{ T.thisCouldBeYouTitle[lang] }}</div>
+      <p style="font-size:15px; color:#4c5e77; margin:0 0 20px;">{{ T.thisCouldBeYouBody[lang] }}</p>
+      <span onClick="{{ goJoin }}" style="background:#0b3c7a; color:#fff; padding:12px 26px; border-radius:8px; font-weight:600; font-size:14.5px; cursor:pointer; display:inline-block;">{{ T.seeHowToJoin[lang] }}</span>
     </div>
   </div>
   </sc-if>
@@ -272,12 +277,12 @@
   <!-- ============ NEWS ============ -->
   <sc-if value="{{ isNews }}" hint-placeholder-val="{{ false }}">
   <div data-screen-label="News" style="max-width:900px; margin:0 auto; padding:80px 40px;">
-    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">News</div>
-    <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; margin:0 0 56px; letter-spacing:-0.01em;">Lab news &amp; updates</h1>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">{{ T.newsPageEyebrow[lang] }}</div>
+    <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; margin:0 0 56px; letter-spacing:-0.01em;">{{ T.newsPageH1[lang] }}</h1>
     <div style="display:flex; flex-direction:column; gap:0;">
-      <div class="r-news-item" style="display:grid; grid-template-columns:120px 1fr; gap:32px; padding:32px 0; border-top:1px solid #e2e8f2;"><div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#0b3c7a;">Jul 2026</div><div><div style="font-size:19px; font-weight:600; margin-bottom:8px;">Our first virtual group meeting</div><div style="font-size:15.5px; line-height:1.6; color:#5b6b83;">The whole team met online for the first time — with members joining from the US and the UK. A great start to doing hard science together, across time zones.</div><img src="uploads/first_group_meeting.jpg" alt="The lab's first virtual group meeting, with members joining from the US and the UK" style="width:100%; max-width:560px; border-radius:12px; margin-top:18px; display:block; border:1px solid #e2e8f2;" loading="lazy"></div></div>
-      <div class="r-news-item" style="display:grid; grid-template-columns:120px 1fr; gap:32px; padding:32px 0; border-top:1px solid #e2e8f2;"><div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#0b3c7a;">Jul 2026</div><div><div style="font-size:19px; font-weight:600; margin-bottom:8px;">Welcome the summer interns</div><div style="font-size:15.5px; line-height:1.6; color:#5b6b83;">Our summer interns are here — welcome! Come try real research with us; bring curiosity and persistence, and we'll figure out the rest together.</div></div></div>
-      <div class="r-news-item" style="display:grid; grid-template-columns:120px 1fr; gap:32px; padding:32px 0; border-top:1px solid #e2e8f2; border-bottom:1px solid #e2e8f2;"><div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#0b3c7a;">Jul 2026</div><div><div style="font-size:19px; font-weight:600; margin-bottom:8px;">The Zhou Lab opens at Westlake University</div><div style="font-size:15.5px; line-height:1.6; color:#5b6b83;">We've officially launched in the School of Life Sciences and are recruiting curious scientists across all levels — physics, biology, chemistry and CS all welcome.</div></div></div>
+      <div class="r-news-item" style="display:grid; grid-template-columns:120px 1fr; gap:32px; padding:32px 0; border-top:1px solid #e2e8f2;"><div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#0b3c7a;">Jul 2026</div><div><div style="font-size:19px; font-weight:600; margin-bottom:8px;">{{ T.newsPageItem1Title[lang] }}</div><div style="font-size:15.5px; line-height:1.6; color:#5b6b83;">{{ T.newsPageItem1Body[lang] }}</div><img src="uploads/first_group_meeting.jpg" alt="{{ T.newsPageImgAlt[lang] }}" style="width:100%; max-width:560px; border-radius:12px; margin-top:18px; display:block; border:1px solid #e2e8f2;" loading="lazy"></div></div>
+      <div class="r-news-item" style="display:grid; grid-template-columns:120px 1fr; gap:32px; padding:32px 0; border-top:1px solid #e2e8f2;"><div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#0b3c7a;">Jul 2026</div><div><div style="font-size:19px; font-weight:600; margin-bottom:8px;">{{ T.newsPageItem2Title[lang] }}</div><div style="font-size:15.5px; line-height:1.6; color:#5b6b83;">{{ T.newsPageItem2Body[lang] }}</div></div></div>
+      <div class="r-news-item" style="display:grid; grid-template-columns:120px 1fr; gap:32px; padding:32px 0; border-top:1px solid #e2e8f2; border-bottom:1px solid #e2e8f2;"><div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#0b3c7a;">Jul 2026</div><div><div style="font-size:19px; font-weight:600; margin-bottom:8px;">{{ T.newsPageItem3Title[lang] }}</div><div style="font-size:15.5px; line-height:1.6; color:#5b6b83;">{{ T.newsPageItem3Body[lang] }}</div></div></div>
     </div>
   </div>
   </sc-if>
@@ -285,14 +290,14 @@
   <!-- ============ GALLERY ============ -->
   <sc-if value="{{ isGallery }}" hint-placeholder-val="{{ false }}">
   <div data-screen-label="Gallery" style="max-width:1200px; margin:0 auto; padding:80px 40px;">
-    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">Gallery</div>
-    <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; margin:0 0 16px; letter-spacing:-0.01em;">Life in the lab</h1>
-    <p style="font-size:18px; line-height:1.6; color:#5b6b83; max-width:720px; margin:0 0 56px;">A look at our space at Westlake University — the campus, the bench, and the desks where we work.</p>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">{{ T.galleryEyebrow[lang] }}</div>
+    <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; margin:0 0 16px; letter-spacing:-0.01em;">{{ T.galleryH1[lang] }}</h1>
+    <p style="font-size:18px; line-height:1.6; color:#5b6b83; max-width:720px; margin:0 0 56px;">{{ T.galleryIntro[lang] }}</p>
 
     <div class="r-cards-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:26px;">
-      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:4/3; overflow:hidden;"><img src="uploads/gallery-campus-courtyard.jpg" alt="Westlake University campus courtyard" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div><div style="padding:18px 20px;"><div style="font-size:15.5px; font-weight:600;">Campus</div><div style="font-size:13.5px; color:#7c899c; margin-top:4px;">Westlake University, Hangzhou</div></div></div>
-      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:4/3; overflow:hidden;"><img src="uploads/gallery-wet-lab.jpg" alt="The lab's wet lab bench space" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div><div style="padding:18px 20px;"><div style="font-size:15.5px; font-weight:600;">Wet lab</div><div style="font-size:13.5px; color:#7c899c; margin-top:4px;">Where the bench work happens</div></div></div>
-      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:4/3; overflow:hidden;"><img src="uploads/gallery-office-space.jpg" alt="Lab office and desk space" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div><div style="padding:18px 20px;"><div style="font-size:15.5px; font-weight:600;">Office space</div><div style="font-size:13.5px; color:#7c899c; margin-top:4px;">Desks for reading, writing, and analysis</div></div></div>
+      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:4/3; overflow:hidden;"><img src="uploads/gallery-campus-courtyard.jpg" alt="{{ T.galleryCampusImgAlt[lang] }}" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div><div style="padding:18px 20px;"><div style="font-size:15.5px; font-weight:600;">{{ T.galleryCampusTitle[lang] }}</div><div style="font-size:13.5px; color:#7c899c; margin-top:4px;">{{ T.galleryCampusDesc[lang] }}</div></div></div>
+      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:4/3; overflow:hidden;"><img src="uploads/gallery-wet-lab.jpg" alt="{{ T.galleryWetLabImgAlt[lang] }}" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div><div style="padding:18px 20px;"><div style="font-size:15.5px; font-weight:600;">{{ T.galleryWetLabTitle[lang] }}</div><div style="font-size:13.5px; color:#7c899c; margin-top:4px;">{{ T.galleryWetLabDesc[lang] }}</div></div></div>
+      <div style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; overflow:hidden;"><div style="aspect-ratio:4/3; overflow:hidden;"><img src="uploads/gallery-office-space.jpg" alt="{{ T.galleryOfficeImgAlt[lang] }}" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div><div style="padding:18px 20px;"><div style="font-size:15.5px; font-weight:600;">{{ T.galleryOfficeTitle[lang] }}</div><div style="font-size:13.5px; color:#7c899c; margin-top:4px;">{{ T.galleryOfficeDesc[lang] }}</div></div></div>
     </div>
   </div>
   </sc-if>
@@ -300,20 +305,20 @@
   <!-- ============ JOIN ============ -->
   <sc-if value="{{ isJoin }}" hint-placeholder-val="{{ false }}">
   <div data-screen-label="Join" style="max-width:1000px; margin:0 auto; padding:80px 40px;">
-    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">Join us</div>
-    <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; line-height:1.12; margin:0 0 24px; letter-spacing:-0.01em; max-width:780px;">Join us — this summer, and beyond.</h1>
-    <p style="font-size:18px; line-height:1.65; color:#3d4f66; max-width:700px; margin:0 0 56px;">We're recruiting PhD students, rotation students, research assistants and postdocs, and we love hosting summer interns. No single background required — physics, biology, chemistry and CS are all welcome. Bring curiosity and persistence; we'll figure out the rest together.</p>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.16em; color:#0b3c7a; text-transform:uppercase; margin-bottom:22px;">{{ T.joinEyebrow[lang] }}</div>
+    <h1 style="font-family:'Spectral',serif; font-weight:400; font-size:48px; line-height:1.12; margin:0 0 24px; letter-spacing:-0.01em; max-width:780px;">{{ T.joinH1[lang] }}</h1>
+    <p style="font-size:18px; line-height:1.65; color:#3d4f66; max-width:700px; margin:0 0 56px;">{{ T.joinIntro[lang] }}</p>
 
     <div style="display:flex; flex-direction:column; gap:18px; margin-bottom:56px;">
-      <div class="r-join-card" style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; padding:32px 36px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;"><div><div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:8px;">PhD &amp; rotation students</div><div style="font-size:15px; line-height:1.6; color:#5b6b83; max-width:620px;">Apply through the Westlake University graduate program, and reach out beforehand to talk through projects and rotations.</div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#1a7a4c; background:#e5f5ec; padding:7px 14px; border-radius:999px; white-space:nowrap;">● Open</span></div>
-      <div class="r-join-card" style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; padding:32px 36px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;"><div><div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:8px;">Postdocs</div><div style="font-size:15px; line-height:1.6; color:#5b6b83; max-width:620px;">For scientists with a PhD (or near completion) in structural biology, biophysics, computation, biochemistry or a related field. Send a CV, a short statement of interests, and two&nbsp;references.</div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#1a7a4c; background:#e5f5ec; padding:7px 14px; border-radius:999px; white-space:nowrap;">● Open</span></div>
-      <div class="r-join-card" style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; padding:32px 36px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;"><div><div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:8px;">Staff scientist</div><div style="font-size:15px; line-height:1.6; color:#5b6b83; max-width:620px;">A senior research position — comparable to an assistant instructor in the US — for scientists who hold a PhD and typically have postdoctoral experience. We're looking for strong expertise in cryo-EM/ET, AI and biophysics, to help drive the lab's research and mentor its members.</div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#1a7a4c; background:#e5f5ec; padding:7px 14px; border-radius:999px; white-space:nowrap;">● Open</span></div>
-      <div class="r-join-card" style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; padding:32px 36px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;"><div><div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:8px;">Research assistants</div><div style="font-size:15px; line-height:1.6; color:#5b6b83; max-width:620px;">Full-time positions for motivated graduates who want hands-on research experience before or between degrees.</div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#1a7a4c; background:#e5f5ec; padding:7px 14px; border-radius:999px; white-space:nowrap;">● Open</span></div>
-      <div class="r-join-card" style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; padding:32px 36px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;"><div><div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:8px;">Summer interns</div><div style="font-size:15px; line-height:1.6; color:#5b6b83; max-width:620px;">Undergraduates curious about the interface of imaging, AI and molecular biology — spend a summer trying real research with us.</div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#1a7a4c; background:#e5f5ec; padding:7px 14px; border-radius:999px; white-space:nowrap;">● Open</span></div>
+      <div class="r-join-card" style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; padding:32px 36px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;"><div><div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:8px;">{{ T.jobPhdTitle[lang] }}</div><div style="font-size:15px; line-height:1.6; color:#5b6b83; max-width:620px;">{{ T.jobPhdDesc[lang] }}</div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#1a7a4c; background:#e5f5ec; padding:7px 14px; border-radius:999px; white-space:nowrap;">● {{ T.openBadge[lang] }}</span></div>
+      <div class="r-join-card" style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; padding:32px 36px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;"><div><div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:8px;">{{ T.jobPostdocTitle[lang] }}</div><div style="font-size:15px; line-height:1.6; color:#5b6b83; max-width:620px;">{{ T.jobPostdocDesc[lang] }}</div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#1a7a4c; background:#e5f5ec; padding:7px 14px; border-radius:999px; white-space:nowrap;">● {{ T.openBadge[lang] }}</span></div>
+      <div class="r-join-card" style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; padding:32px 36px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;"><div><div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:8px;">{{ T.jobStaffTitle[lang] }}</div><div style="font-size:15px; line-height:1.6; color:#5b6b83; max-width:620px;">{{ T.jobStaffDesc[lang] }}</div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#1a7a4c; background:#e5f5ec; padding:7px 14px; border-radius:999px; white-space:nowrap;">● {{ T.openBadge[lang] }}</span></div>
+      <div class="r-join-card" style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; padding:32px 36px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;"><div><div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:8px;">{{ T.jobRaTitle[lang] }}</div><div style="font-size:15px; line-height:1.6; color:#5b6b83; max-width:620px;">{{ T.jobRaDesc[lang] }}</div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#1a7a4c; background:#e5f5ec; padding:7px 14px; border-radius:999px; white-space:nowrap;">● {{ T.openBadge[lang] }}</span></div>
+      <div class="r-join-card" style="background:#fff; border:1px solid #e6ecf5; border-radius:14px; padding:32px 36px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;"><div><div style="font-family:'Spectral',serif; font-size:24px; margin-bottom:8px;">{{ T.jobInternTitle[lang] }}</div><div style="font-size:15px; line-height:1.6; color:#5b6b83; max-width:620px;">{{ T.jobInternDesc[lang] }}</div></div><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#1a7a4c; background:#e5f5ec; padding:7px 14px; border-radius:999px; white-space:nowrap;">● {{ T.openBadge[lang] }}</span></div>
     </div>
 
     <div style="background:#0b3c7a; border-radius:16px; padding:48px; color:#eaf1fb; display:flex; justify-content:space-between; align-items:center; gap:32px;">
-      <div><h3 style="font-family:'Spectral',serif; font-weight:400; font-size:28px; margin:0 0 10px; color:#fff;">Ready to reach out?</h3><p style="font-size:16px; color:#bcd2ef; margin:0;">Email Huabin directly with your CV and a few sentences about what excites you.</p></div>
+      <div><h3 style="font-family:'Spectral',serif; font-weight:400; font-size:28px; margin:0 0 10px; color:#fff;">{{ T.ctaHeading[lang] }}</h3><p style="font-size:16px; color:#bcd2ef; margin:0;">{{ T.ctaBody[lang] }}</p></div>
       <a href="mailto:zhouhuabin@westlake.edu.cn" style="background:#fff; color:#0b3c7a; padding:15px 30px; border-radius:8px; font-weight:600; font-size:15px; white-space:nowrap; font-family:'IBM Plex Mono',monospace; text-decoration:none;">zhouhuabin@westlake.edu.cn</a>
     </div>
   </div>
@@ -324,44 +329,210 @@
     <div class="r-footer r-padded" style="max-width:1200px; margin:0 auto; padding:64px 40px 44px; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:48px;">
       <div>
         <div style="font-family:'Spectral',serif; font-size:22px; color:#fff; margin-bottom:14px;">The Huabin Zhou Lab</div>
-        <p style="font-size:14.5px; line-height:1.7; margin:0; max-width:360px;">Seeing how molecules organize life — across every scale. Understanding how biomolecules arrange in space, and how that arrangement decides what a cell becomes.</p>
+        <p style="font-size:14.5px; line-height:1.7; margin:0; max-width:360px;">{{ T.footerDesc[lang] }}</p>
       </div>
       <div>
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#5f7593; text-transform:uppercase; margin-bottom:16px;">Contact</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#5f7593; text-transform:uppercase; margin-bottom:16px;">{{ T.footerContactLabel[lang] }}</div>
         <a href="mailto:zhouhuabin@westlake.edu.cn" style="font-size:14.5px; line-height:2; color:#8ea4c0; text-decoration:none; display:block;">zhouhuabin@westlake.edu.cn</a>
-        <div style="font-size:14.5px; line-height:2;">School of Life Sciences</div>
-        <div style="font-size:14.5px; line-height:2;">Westlake University, Hangzhou, China</div>
+        <div style="font-size:14.5px; line-height:2;">{{ T.footerSchoolLine[lang] }}</div>
+        <div style="font-size:14.5px; line-height:2;">{{ T.footerAddressLine[lang] }}</div>
       </div>
       <div>
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#5f7593; text-transform:uppercase; margin-bottom:16px;">Elsewhere</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; color:#5f7593; text-transform:uppercase; margin-bottom:16px;">{{ T.footerElsewhereLabel[lang] }}</div>
         <a href="https://orcid.org/0000-0002-7788-0806" target="_blank" style="font-size:14.5px; line-height:2; color:#8ea4c0; text-decoration:none; display:block;">ORCID ↗</a>
-        <a href="https://lifesciences.westlake.edu.cn/faculty/huabin-zhou.html?id=research" target="_blank" style="font-size:14.5px; line-height:2; color:#8ea4c0; text-decoration:none; display:block;">Westlake profile ↗</a>
-        <a href="https://lifesciences.westlake.edu.cn/" target="_blank" style="font-size:14.5px; line-height:2; color:#8ea4c0; text-decoration:none; display:block;">Westlake School of Life Sciences ↗</a>
+        <a href="https://lifesciences.westlake.edu.cn/faculty/huabin-zhou.html?id=research" target="_blank" style="font-size:14.5px; line-height:2; color:#8ea4c0; text-decoration:none; display:block;">{{ T.footerWestlakeProfileLink[lang] }}</a>
+        <a href="https://lifesciences.westlake.edu.cn/" target="_blank" style="font-size:14.5px; line-height:2; color:#8ea4c0; text-decoration:none; display:block;">{{ T.footerWestlakeSolsLink[lang] }}</a>
       </div>
     </div>
-    <div style="max-width:1200px; margin:0 auto; padding:20px 40px 0; border-top:1px solid #1c2b40; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;"><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#5f7593;">© 2026 The Huabin Zhou Lab · Westlake University · School of Life Sciences</span><div style="background:#fff; border-radius:8px; padding:9px 13px; display:flex; align-items:center;"><img src="uploads/school_of_life_science.png" alt="Westlake University · School of Life Sciences" style="height:24px; width:auto; display:block;" loading="lazy"></div></div>
+    <div style="max-width:1200px; margin:0 auto; padding:20px 40px 0; border-top:1px solid #1c2b40; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;"><span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#5f7593;">{{ T.footerCopyright[lang] }}</span><div style="background:#fff; border-radius:8px; padding:9px 13px; display:flex; align-items:center;"><img src="uploads/school_of_life_science.png" alt="Westlake University · School of Life Sciences" style="height:24px; width:auto; display:block;" loading="lazy"></div></div>
     <div style="height:44px;"></div>
   </div>
 
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
+const T = {
+  navHome: { en: "Home", zh: "首页" },
+  navResearch: { en: "Research", zh: "研究方向" },
+  navPub: { en: "Publications", zh: "论文发表" },
+  navPeople: { en: "People", zh: "团队成员" },
+  navNews: { en: "News", zh: "最新动态" },
+  navGallery: { en: "Gallery", zh: "图片相册" },
+  navJoin: { en: "Join us", zh: "加入我们" },
+  navTagline: { en: "Westlake University", zh: "西湖大学" },
+
+  heroEyebrow: { en: "The big question", zh: "核心问题" },
+  heroTitle: { en: "How do biomolecules arrange themselves in space — and how does that arrangement decide what a cell becomes?", zh: "生物分子如何在空间中自我组织——这种组织方式又如何决定细胞的命运?" },
+  heroBody: { en: "We develop and combine multiscale, multimodal tools to watch molecules organize inside and outside the cell — from a whole nucleus down to a single nucleosome — and ask how that organization runs the genome.", zh: "我们开发并结合多尺度、多模态的研究工具,观察分子在细胞内外如何组织——从完整的细胞核到单个核小体——并探究这种组织方式如何驱动基因组的运作。" },
+  heroBtn1: { en: "Explore the science", zh: "探索我们的研究" },
+  heroBtn2: { en: "Meet the team →", zh: "认识我们的团队 →" },
+  heroImgAlt: { en: "From the nucleus down to a single nucleosome — chromatin organized across scales", zh: "从细胞核到单个核小体——跨尺度组织的染色质" },
+  heroBadgeTitle: { en: "Nucleus → nucleosome", zh: "细胞核 → 核小体" },
+  heroBadgeSub: { en: "2000 nm to 1 nm, in one framework", zh: "从2000纳米到1纳米,一个统一的框架" },
+
+  scaleEyebrow: { en: "Across every scale", zh: "跨越每一个尺度" },
+  scaleNucleus: { en: "Nucleus", zh: "细胞核" },
+  scaleCondensate: { en: "Condensate", zh: "凝聚体" },
+  scaleFiber: { en: "Chromatin fiber", zh: "染色质纤维" },
+  scaleNucleosome: { en: "Nucleosome", zh: "核小体" },
+
+  methodCryoTitle: { en: "Cryo-electron tomography", zh: "冷冻电镜断层扫描" },
+  methodCryoDesc: { en: "Structures in their native cellular context", zh: "在天然细胞环境中解析结构" },
+  methodAiTitle: { en: "Artificial intelligence", zh: "人工智能" },
+  methodAiDesc: { en: "Turning images and data into models", zh: "将图像和数据转化为模型" },
+  methodBiochemTitle: { en: "Biochemical reconstitution", zh: "生化重构" },
+  methodBiochemDesc: { en: "Rebuilding systems to test how they work", zh: "重建体系以检验其工作原理" },
+  methodCellTitle: { en: "Cellular experiments", zh: "细胞实验" },
+  methodCellDesc: { en: "Watching organization shape cell behavior", zh: "观察组织方式如何塑造细胞行为" },
+
+  studyHeading: { en: "What we study", zh: "研究方向" },
+  studyAllLink: { en: "All research →", zh: "查看全部研究 →" },
+  themeLabel01: { en: "Theme 01", zh: "方向一" },
+  themeLabel02: { en: "Theme 02", zh: "方向二" },
+  themeLabel03: { en: "Theme 03", zh: "方向三" },
+  theme1Title: { en: "Chromatin, organized across scales", zh: "跨尺度组织的染色质" },
+  theme1DescShort: { en: "How nucleosome spacing and chromatin folding build the genome's 3D architecture — and tune it.", zh: "核小体间距与染色质折叠如何构建并调控基因组的三维结构。" },
+  theme2Title: { en: "Biomolecular condensates", zh: "生物分子凝聚体" },
+  theme2DescShort: { en: "How biomolecules condense into membraneless compartments that concentrate reactions and tune genome activity.", zh: "生物分子如何凝聚形成无膜区室,富集反应并调控基因组活性。" },
+  theme3Title: { en: "From structure to cell fate", zh: "从分子结构到细胞命运" },
+  theme3DescShort: { en: "Linking molecular organization to transcription, genome function, and how cells decide what to become.", zh: "将分子组织与转录、基因组功能及细胞命运决定联系起来。" },
+  theme1ImgAlt: { en: "Chromatin, organized across scales", zh: "跨尺度组织的染色质" },
+  theme2ImgAlt: { en: "Biomolecular condensates", zh: "生物分子凝聚体" },
+  theme3ImgAlt: { en: "From molecular structure to cell fate — organization guiding what a cell becomes", zh: "从分子结构到细胞命运——组织方式决定细胞走向" },
+
+  piEyebrow: { en: "Principal Investigator", zh: "首席研究员" },
+  piQuote: { en: "“Organization is one of life's instructions. We're building the tools to read it — from a whole nucleus down to a single nucleosome.”", zh: "“组织方式是生命的指令之一。我们正在构建解读它的工具——从完整的细胞核到单个核小体。”" },
+  piAffiliation: { en: "School of Life Sciences, Westlake University", zh: "西湖大学生命科学学院" },
+
+  newsHeading: { en: "Latest news", zh: "最新动态" },
+  newsItem1: { en: "Our first virtual group meeting, with members joining from the US and UK.", zh: "我们的第一次线上组会,成员分别从美国和英国连线参加。" },
+  newsItem2: { en: "Welcome the summer interns — our first interns have arrived.", zh: "欢迎暑期实习生——我们的第一批实习生已经到岗。" },
+  newsItem3: { en: "The Zhou Lab opens at Westlake University — recruiting across all levels.", zh: "周实验室正式落户西湖大学——各层次人才火热招募中。" },
+
+  joinTeaserHeading: { en: "Join us", zh: "加入我们" },
+  joinTeaserBody: { en: "PhD students, rotation students, research assistants, postdocs — and summer interns. No single background required.", zh: "博士生、轮转学生、科研助理、博士后——以及暑期实习生。不限专业背景。" },
+  jobPhdShort: { en: "PhD & rotation students", zh: "博士生与轮转学生" },
+  jobPostdocRaShort: { en: "Postdocs & research assistants", zh: "博士后与科研助理" },
+  jobInternShort: { en: "Summer interns", zh: "暑期实习生" },
+  openArrow: { en: "Open →", zh: "招募中 →" },
+
+  researchEyebrow: { en: "Research", zh: "研究" },
+  researchH1: { en: "One question, many lenses.", zh: "一个问题,多重视角。" },
+  researchIntro: { en: "Life is organized across scales — from a whole nucleus down to a single nucleosome. We develop and combine cryo-electron tomography, artificial intelligence, biochemical reconstitution and cellular experiments to watch biomolecules organize inside and outside the cell, and to ask how that organization runs the genome and shapes what a cell becomes.", zh: "生命的组织跨越多个尺度——从完整的细胞核到单个核小体。我们开发并结合冷冻电镜断层扫描、人工智能、生化重构和细胞实验,观察生物分子在细胞内外的组织方式,并探究这种组织如何驱动基因组运作、决定细胞命运。" },
+  theme1DescLong: { en: "How does a two-metre genome fold into a nucleus, and how does that folding decide which genes are read? We connect nucleosome spacing and chromatin fiber folding to the genome's 3D architecture — and to how it is tuned.", zh: "两米长的基因组如何折叠进入细胞核?这种折叠方式又如何决定哪些基因被读取?我们将核小体间距和染色质纤维折叠与基因组的三维结构联系起来,并探究其调控机制。" },
+  theme2DescLong: { en: "Many biomolecules condense into membraneless compartments that concentrate reactions and organize the crowded interior of the cell. We study how these condensates form, what they gather, and how they tune genome activity.", zh: "许多生物分子凝聚形成无膜区室,富集反应并组织拥挤的细胞内部环境。我们研究这些凝聚体如何形成、聚集了哪些成分,以及如何调控基因组活性。" },
+  theme3DescLong: { en: "Ultimately, organization matters because it changes what cells do. We link molecular organization to transcription, genome function, and the decisions that set a cell's identity.", zh: "归根结底,组织方式之所以重要,是因为它改变了细胞的行为。我们将分子组织与转录、基因组功能以及决定细胞身份的关键过程联系起来。" },
+  research1ImgAlt: { en: "Chromatin architecture across scales — DNA to nucleosome to chromosome", zh: "跨尺度的染色质结构——从DNA到核小体再到染色体" },
+  research2ImgAlt: { en: "Biomolecular condensates forming a membraneless compartment", zh: "生物分子凝聚体形成无膜区室" },
+  research3ImgAlt: { en: "From molecular structure to cell fate — nucleosome to transcription to cell identity", zh: "从分子结构到细胞命运——从核小体到转录再到细胞身份" },
+
+  toolkitEyebrow: { en: "How we work · one question, many lenses", zh: "我们的研究方式 · 一个问题,多重视角" },
+  toolkitHeading: { en: "Our toolkit", zh: "我们的研究工具" },
+  toolCryoName: { en: "Cryo-ET", zh: "冷冻电镜断层扫描" },
+  toolCryoDesc: { en: "Structures in their native cellular context.", zh: "在天然细胞环境中解析结构。" },
+  toolAiName: { en: "Artificial intelligence", zh: "人工智能" },
+  toolAiDesc: { en: "Turning images and data into models.", zh: "将图像和数据转化为模型。" },
+  toolReconName: { en: "Reconstitution", zh: "生化重构" },
+  toolReconDesc: { en: "Rebuilding systems to test how they work.", zh: "重建体系以检验其工作原理。" },
+  toolCellName: { en: "Cell biology", zh: "细胞生物学" },
+  toolCellDesc: { en: "Watching organization shape cell behavior.", zh: "观察组织方式如何塑造细胞行为。" },
+
+  pubEyebrow: { en: "Publications", zh: "论文发表" },
+  pubH1: { en: "Selected publications", zh: "代表性论文" },
+  pubIntro: { en: "A full, continuously updated list is available on ORCID.", zh: "完整且持续更新的论文列表请见 ORCID。" },
+
+  peopleEyebrow: { en: "People", zh: "团队成员" },
+  peopleH1: { en: "A young, curious team", zh: "一支年轻而充满好奇心的团队" },
+  peopleIntro: { en: "Across physics, chemistry, biology & code. We come from different backgrounds and learn from each other every day — we care about good questions, careful experiments, and a lab where people grow and have fun doing hard science together.", zh: "我们来自物理、化学、生物和编程等不同背景,每天互相学习。我们看重好问题、严谨的实验,以及一个让大家共同成长、并在攻克难题的过程中享受科研乐趣的实验室氛围。" },
+  piBioText: { en: "Huabin develops and combines multiscale, multimodal approaches — cryo-electron tomography, artificial intelligence, biochemical reconstitution and cellular experiments — to understand how biomolecules organize in space, and how that organization regulates the life of the cell.", zh: "Huabin开发并结合多尺度、多模态的研究方法——冷冻电镜断层扫描、人工智能、生化重构和细胞实验——以理解生物分子如何在空间中组织,以及这种组织方式如何调控细胞的生命活动。" },
+  piBioPlaceholder: { en: "[ full bio to be added ]", zh: "[ 个人简介完善中 ]" },
+  linkOrcid: { en: "ORCID ↗", zh: "ORCID ↗" },
+  linkEmail: { en: "Email ↗", zh: "邮箱 ↗" },
+  linkWestlakeProfile: { en: "Westlake profile ↗", zh: "西湖大学主页 ↗" },
+  labMembersHeading: { en: "Lab members", zh: "实验室成员" },
+  roleVisitingScholar: { en: "Visiting scholar", zh: "访问学者" },
+  roleResearchAssistant: { en: "Research assistant", zh: "科研助理" },
+  thisCouldBeYouTitle: { en: "This could be you.", zh: "下一个也许就是你。" },
+  thisCouldBeYouBody: { en: "We're recruiting PhD & rotation students, research assistants, postdocs — and summer interns.", zh: "我们正在招募博士生、轮转学生、科研助理、博士后,以及暑期实习生。" },
+  seeHowToJoin: { en: "See how to join →", zh: "了解如何加入 →" },
+  memberYananZhang: { en: "Yanan Zhang", zh: "张雅楠" },
+  memberChunbaoLao: { en: "Chunbao Lao", zh: "劳春葆" },
+  memberShishuoSong: { en: "Shishuo Song", zh: "宋士硕" },
+
+  newsPageEyebrow: { en: "News", zh: "动态" },
+  newsPageH1: { en: "Lab news & updates", zh: "实验室动态" },
+  newsPageItem1Title: { en: "Our first virtual group meeting", zh: "第一次线上组会" },
+  newsPageItem1Body: { en: "The whole team met online for the first time — with members joining from the US and the UK. A great start to doing hard science together, across time zones.", zh: "全体成员第一次在线上相聚——分别来自美国和英国。这是我们跨越时区、共同开展科研工作的良好开端。" },
+  newsPageItem2Title: { en: "Welcome the summer interns", zh: "欢迎暑期实习生" },
+  newsPageItem2Body: { en: "Our summer interns are here — welcome! Come try real research with us; bring curiosity and persistence, and we'll figure out the rest together.", zh: "我们的暑期实习生已经到岗——欢迎加入!来和我们一起体验真正的科研工作吧,带上好奇心和坚持,其余的我们一起摸索。" },
+  newsPageItem3Title: { en: "The Zhou Lab opens at Westlake University", zh: "周实验室正式落户西湖大学" },
+  newsPageItem3Body: { en: "We've officially launched in the School of Life Sciences and are recruiting curious scientists across all levels — physics, biology, chemistry and CS all welcome.", zh: "我们已正式在生命科学学院启动,现面向各层次招募充满好奇心的科研人才——物理、生物、化学和计算机背景均欢迎申请。" },
+  newsPageImgAlt: { en: "The lab's first virtual group meeting, with members joining from the US and the UK", zh: "实验室第一次线上组会,成员分别来自美国和英国" },
+
+  galleryEyebrow: { en: "Gallery", zh: "相册" },
+  galleryH1: { en: "Life in the lab", zh: "实验室日常" },
+  galleryIntro: { en: "A look at our space at Westlake University — the campus, the bench, and the desks where we work.", zh: "一览我们在西湖大学的空间——校园、实验台,以及我们工作的办公桌。" },
+  galleryCampusTitle: { en: "Campus", zh: "校园" },
+  galleryCampusDesc: { en: "Westlake University, Hangzhou", zh: "浙江杭州,西湖大学" },
+  galleryCampusImgAlt: { en: "Westlake University campus courtyard", zh: "西湖大学校园庭院" },
+  galleryWetLabTitle: { en: "Wet lab", zh: "湿实验室" },
+  galleryWetLabDesc: { en: "Where the bench work happens", zh: "实验操作的地方" },
+  galleryWetLabImgAlt: { en: "The lab's wet lab bench space", zh: "实验室的湿实验台空间" },
+  galleryOfficeTitle: { en: "Office space", zh: "办公空间" },
+  galleryOfficeDesc: { en: "Desks for reading, writing, and analysis", zh: "阅读、写作与数据分析的办公桌" },
+  galleryOfficeImgAlt: { en: "Lab office and desk space", zh: "实验室办公与工位空间" },
+
+  joinEyebrow: { en: "Join us", zh: "加入我们" },
+  joinH1: { en: "Join us — this summer, and beyond.", zh: "加入我们——这个夏天,以及未来。" },
+  joinIntro: { en: "We're recruiting PhD students, rotation students, research assistants and postdocs, and we love hosting summer interns. No single background required — physics, biology, chemistry and CS are all welcome. Bring curiosity and persistence; we'll figure out the rest together.", zh: "我们正在招募博士生、轮转学生、科研助理和博士后,也非常欢迎暑期实习生。不限专业背景——物理、生物、化学和计算机背景均欢迎申请。带上好奇心和坚持,其余的我们一起摸索。" },
+  jobPhdTitle: { en: "PhD & rotation students", zh: "博士生与轮转学生" },
+  jobPhdDesc: { en: "Apply through the Westlake University graduate program, and reach out beforehand to talk through projects and rotations.", zh: "请通过西湖大学研究生项目申请,并提前联系我们讨论课题与轮转安排。" },
+  jobPostdocTitle: { en: "Postdocs", zh: "博士后" },
+  jobPostdocDesc: { en: "For scientists with a PhD (or near completion) in structural biology, biophysics, computation, biochemistry or a related field. Send a CV, a short statement of interests, and two references.", zh: "面向已获得或即将获得结构生物学、生物物理、计算科学、生物化学或相关领域博士学位的科研人员。请提供简历、简短的研究兴趣陈述以及两位推荐人信息。" },
+  jobStaffTitle: { en: "Staff scientist", zh: "专职研究员" },
+  jobStaffDesc: { en: "A senior research position — comparable to an assistant instructor in the US — for scientists who hold a PhD and typically have postdoctoral experience. We're looking for strong expertise in cryo-EM/ET, AI and biophysics, to help drive the lab's research and mentor its members.", zh: "一个高级研究岗位——大致相当于美国的助理讲师职位——面向具有博士学位且通常已有博士后经历的科研人员。我们期待具备冷冻电镜/断层扫描、人工智能和生物物理专长的人才,协助推动实验室研究并指导团队成员。" },
+  jobRaTitle: { en: "Research assistants", zh: "科研助理" },
+  jobRaDesc: { en: "Full-time positions for motivated graduates who want hands-on research experience before or between degrees.", zh: "面向希望在攻读学位前或学位之间获得实践科研经验的优秀毕业生的全职岗位。" },
+  jobInternTitle: { en: "Summer interns", zh: "暑期实习生" },
+  jobInternDesc: { en: "Undergraduates curious about the interface of imaging, AI and molecular biology — spend a summer trying real research with us.", zh: "面向对成像技术、人工智能与分子生物学交叉领域感兴趣的本科生——用一个夏天体验真正的科研工作。" },
+  openBadge: { en: "Open", zh: "招募中" },
+  ctaHeading: { en: "Ready to reach out?", zh: "准备好联系我们了吗?" },
+  ctaBody: { en: "Email Huabin directly with your CV and a few sentences about what excites you.", zh: "请直接发送邮件给 Huabin,附上简历以及几句关于你的研究兴趣的介绍。" },
+
+  footerDesc: { en: "Seeing how molecules organize life — across every scale. Understanding how biomolecules arrange in space, and how that arrangement decides what a cell becomes.", zh: "观察分子如何组织生命——跨越每一个尺度。理解生物分子如何在空间中排布,以及这种排布如何决定细胞的命运。" },
+  footerContactLabel: { en: "Contact", zh: "联系方式" },
+  footerSchoolLine: { en: "School of Life Sciences", zh: "生命科学学院" },
+  footerAddressLine: { en: "Westlake University, Hangzhou, China", zh: "中国浙江杭州,西湖大学" },
+  footerElsewhereLabel: { en: "Elsewhere", zh: "更多链接" },
+  footerWestlakeProfileLink: { en: "Westlake profile ↗", zh: "西湖大学主页 ↗" },
+  footerWestlakeSolsLink: { en: "Westlake School of Life Sciences ↗", zh: "西湖大学生命科学学院 ↗" },
+  footerCopyright: { en: "© 2026 The Huabin Zhou Lab · Westlake University · School of Life Sciences", zh: "© 2026 The Huabin Zhou Lab · 西湖大学 · 生命科学学院" }
+};
 class Component extends DCLogic {
-  state = { page: 'home' };
+  state = { page: 'home', lang: 'en' };
   go(p){ this.setState({ page: p }); if (typeof window !== 'undefined') window.scrollTo(0, 0); }
+  setLang(l){ this.setState({ lang: l }); }
   navStyle(k){
     const active = this.state.page === k;
     return { color: active ? '#0b3c7a' : '#33465f', fontWeight: active ? 600 : 400, cursor: 'pointer', paddingBottom: '3px', borderBottom: active ? '2px solid #0b3c7a' : '2px solid transparent' };
   }
+  langStyle(l){
+    const active = this.state.lang === l;
+    return { color: active ? '#0b3c7a' : '#9aa8bd', fontWeight: active ? 700 : 500, cursor: 'pointer', fontFamily: "'IBM Plex Mono',monospace", fontSize: '12px' };
+  }
   renderVals(){
     const p = this.state.page;
+    const lang = this.state.lang;
     return {
+      T, lang,
       isHome: p==='home', isResearch: p==='research', isPub: p==='publications',
       isPeople: p==='people', isNews: p==='news', isGallery: p==='gallery', isJoin: p==='join',
       goHome: ()=>this.go('home'), goResearch: ()=>this.go('research'), goPub: ()=>this.go('publications'),
       goPeople: ()=>this.go('people'), goNews: ()=>this.go('news'), goGallery: ()=>this.go('gallery'), goJoin: ()=>this.go('join'),
       navHome: this.navStyle('home'), navResearch: this.navStyle('research'), navPub: this.navStyle('publications'),
-      navPeople: this.navStyle('people'), navNews: this.navStyle('news'), navGallery: this.navStyle('gallery')
+      navPeople: this.navStyle('people'), navNews: this.navStyle('news'), navGallery: this.navStyle('gallery'),
+      setLangEn: ()=>this.setLang('en'), setLangZh: ()=>this.setLang('zh'),
+      langEnStyle: this.langStyle('en'), langZhStyle: this.langStyle('zh')
     };
   }
 }
