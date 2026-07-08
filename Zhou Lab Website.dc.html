@@ -28,7 +28,9 @@
     .r-hero { grid-template-columns: 1fr !important; gap: 24px !important; }
     .r-hero-image-wrap { height: auto !important; aspect-ratio: auto !important; max-height: 320px; }
     .r-hero-image-wrap img { max-height: 320px; object-fit: contain !important; }
-    .r-hero-scale-note { display: none !important; }
+    .r-hero-scale-note { position: static !important; left: auto !important; top: auto !important; transform: none !important; max-width: none !important; display: flex !important; align-items: baseline !important; justify-content: center !important; gap: 8px !important; padding: 7px 0 !important; }
+    .r-hero-scale-note > div { margin-top: 0 !important; }
+    .r-hero-scale-note:first-of-type { border-top: 1px solid #e2e8f2; margin-top: 16px; }
     .r-h1 { font-size: 30px !important; }
     .r-h1-big { font-size: 28px !important; }
     .r-h2 { font-size: 24px !important; }
